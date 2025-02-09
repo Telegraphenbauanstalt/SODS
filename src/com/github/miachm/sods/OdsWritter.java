@@ -409,7 +409,9 @@ class OdsWritter {
         out.writeStartElement("number:text");
         out.writeCharacters("-");
         out.writeEndElement();
-        out.writeEmptyElement("number:day");
+        out.writeStartElement("number:day");
+        out.writeAttribute("number:style", "long");
+        out.writeEndElement();
         out.writeEndElement();
     }
 
